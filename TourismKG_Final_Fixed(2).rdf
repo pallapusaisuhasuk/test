@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xml:base="https://example.org/tourismkg/2026"
+  xmlns:tourismkg="https://example.org/tourismkg/2026#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#BritishMuseum">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Museum"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:hasAccessibilityFeature>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#BritishMuseumStepFreeAccess">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#StepFreeAccess"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+        <tourismkg:hasEvidenceRecord rdf:resource="https://example.org/tourismkg/2026#BritishMuseumAccessEvidence"/>
+        <tourismkg:accessibilityDetails>Lifts and level-access lifts are shown on the museum map. Gallery closures may affect step-free access.</tourismkg:accessibilityDetails>
+      </owl:NamedIndividual>
+    </tourismkg:hasAccessibilityFeature>
+    <tourismkg:hasAdmissionTicket>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#BritishMuseumGeneralAdmission">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#AdmissionTicket"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#VisitorInformation"/>
+        <tourismkg:hasEvidenceRecord rdf:resource="https://example.org/tourismkg/2026#BritishMuseumAdmissionEvidence"/>
+        <tourismkg:isFreeAdmission rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tourismkg:isFreeAdmission>
+      </owl:NamedIndividual>
+    </tourismkg:hasAdmissionTicket>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#London">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#England"/>
+        <tourismkg:displayName>London</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>British Museum</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Nara">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Japan">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:countryISOCode>JP</tourismkg:countryISOCode>
+        <tourismkg:displayName>Japan</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:cityInCountry>
+    <tourismkg:displayName>Nara</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#FitzwilliamMuseum">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Museum"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:hasAccessibilityFeature>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#FitzwilliamStepFreeAccess">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#StepFreeAccess"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+        <tourismkg:hasEvidenceRecord rdf:resource="https://example.org/tourismkg/2026#FitzwilliamAccessEvidence"/>
+        <tourismkg:accessibilityDetails>The courtyard entrance provides step-free access. A lift serves the first floor.</tourismkg:accessibilityDetails>
+      </owl:NamedIndividual>
+    </tourismkg:hasAccessibilityFeature>
+    <tourismkg:hasAdmissionTicket>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#FitzwilliamMuseumGeneralAdmission">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#AdmissionTicket"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#VisitorInformation"/>
+        <tourismkg:hasEvidenceRecord rdf:resource="https://example.org/tourismkg/2026#FitzwilliamAdmissionEvidence"/>
+        <tourismkg:isFreeAdmission rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tourismkg:isFreeAdmission>
+      </owl:NamedIndividual>
+    </tourismkg:hasAdmissionTicket>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Cambridge">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#England"/>
+        <tourismkg:displayName>Cambridge</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Fitzwilliam Museum</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#countryISOCode">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#experienceEndDate">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TourismExperience"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Antalya">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Turkiye">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:countryISOCode>TR</tourismkg:countryISOCode>
+        <tourismkg:displayName>Türkiye</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:cityInCountry>
+    <tourismkg:displayName>Antalya</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Izmir">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Turkiye"/>
+    <tourismkg:displayName>Izmir</tourismkg:displayName>
+    <rdfs:label xml:lang="tr">İzmir</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#sourceCheckedOn">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#CambridgeToKingsCrossRail">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#RailService"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <tourismkg:hasEvidenceRecord>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#KingsCrossRailEvidence">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+        <tourismkg:evidenceClaimText>Great Northern operates direct trains between Cambridge and London King's Cross.</tourismkg:evidenceClaimText>
+        <tourismkg:sourcePublisher>Great Northern</tourismkg:sourcePublisher>
+        <tourismkg:sourceTitle>Trains from Cambridge to London Kings Cross</tourismkg:sourceTitle>
+        <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.greatnorthernrail.com/journey/cambridge-to-london-kings-cross</tourismkg:sourceURL>
+      </owl:NamedIndividual>
+    </tourismkg:hasEvidenceRecord>
+    <tourismkg:hasEvidenceRecord>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#NationalRailSustainabilityEvidence">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+        <tourismkg:evidenceClaimText>Direct trains connect Cambridge with London King's Cross and London Liverpool Street. Rail travel can help lower carbon emissions.</tourismkg:evidenceClaimText>
+        <tourismkg:sourcePublisher>National Rail</tourismkg:sourcePublisher>
+        <tourismkg:sourceTitle>Visit Cambridge by Train</tourismkg:sourceTitle>
+        <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nationalrail.co.uk/discover-by-train/great-british-destinations/visit-cambridge-by-train/</tourismkg:sourceURL>
+      </owl:NamedIndividual>
+    </tourismkg:hasEvidenceRecord>
+    <tourismkg:serviceArrivesAt>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#LondonKingsCrossStation">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+        <tourismkg:stationServesCity rdf:resource="https://example.org/tourismkg/2026#London"/>
+        <tourismkg:displayName>London King's Cross Station</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:serviceArrivesAt>
+    <tourismkg:serviceDepartsFrom>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#CambridgeStation">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+        <tourismkg:stationServesCity rdf:resource="https://example.org/tourismkg/2026#Cambridge"/>
+        <tourismkg:displayName>Cambridge Railway Station</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:serviceDepartsFrom>
+    <tourismkg:serviceDestinationCity rdf:resource="https://example.org/tourismkg/2026#London"/>
+    <tourismkg:serviceOperatedBy>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#GreatNorthern">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportOperator"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Organisation"/>
+        <tourismkg:displayName>Great Northern</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:serviceOperatedBy>
+    <tourismkg:serviceOriginCity rdf:resource="https://example.org/tourismkg/2026#Cambridge"/>
+    <tourismkg:displayName>Cambridge to London King's Cross</tourismkg:displayName>
+    <tourismkg:isDirectService rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tourismkg:isDirectService>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#cityInRegion">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Region"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#offersGuidedTour">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#GuidedTour"/>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Colosseum">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#HistoricSite"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Rome">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Italy"/>
+        <tourismkg:displayName>Rome</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Colosseum</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#locatedInCity">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="Nb4852a59cb7e4b86bc98f7d91b067c3f">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TourismExperience"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#City"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#sourcePublishedOn">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#priceAmount">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#CambridgeToLiverpoolStreetRail">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#RailService"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <tourismkg:hasEvidenceRecord>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#LiverpoolStreetRailEvidence">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+        <tourismkg:evidenceClaimText>Greater Anglia operates rail services between Cambridge and London Liverpool Street.</tourismkg:evidenceClaimText>
+        <tourismkg:sourcePublisher>Greater Anglia</tourismkg:sourcePublisher>
+        <tourismkg:sourceTitle>Trains from Cambridge to London Liverpool Street</tourismkg:sourceTitle>
+        <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.greateranglia.co.uk/train-times/cambridge-to-london-liverpool-street</tourismkg:sourceURL>
+      </owl:NamedIndividual>
+    </tourismkg:hasEvidenceRecord>
+    <tourismkg:hasEvidenceRecord rdf:resource="https://example.org/tourismkg/2026#NationalRailSustainabilityEvidence"/>
+    <tourismkg:serviceArrivesAt>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#LondonLiverpoolStreetStation">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+        <tourismkg:stationServesCity rdf:resource="https://example.org/tourismkg/2026#London"/>
+        <tourismkg:displayName>London Liverpool Street Station</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:serviceArrivesAt>
+    <tourismkg:serviceDepartsFrom rdf:resource="https://example.org/tourismkg/2026#CambridgeStation"/>
+    <tourismkg:serviceDestinationCity rdf:resource="https://example.org/tourismkg/2026#London"/>
+    <tourismkg:serviceOperatedBy>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#GreaterAnglia">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#TransportOperator"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Organisation"/>
+        <tourismkg:displayName>Greater Anglia</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:serviceOperatedBy>
+    <tourismkg:serviceOriginCity rdf:resource="https://example.org/tourismkg/2026#Cambridge"/>
+    <tourismkg:displayName>Cambridge to London Liverpool Street</tourismkg:displayName>
+    <tourismkg:isDirectService rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</tourismkg:isDirectService>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#stopOrder">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#ItineraryStop"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#NationalPark">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#NaturalAttraction"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#experienceProvidedBy">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TourismExperience"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Organisation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasEvidenceRecord">
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#longitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#serviceOperatedBy">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TransportOperator"/>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#TokyoNationalMuseum">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Museum"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Tokyo">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Japan"/>
+        <tourismkg:displayName>Tokyo</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Tokyo National Museum</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Jaipur">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#India">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:countryISOCode>IN</tourismkg:countryISOCode>
+        <tourismkg:displayName>India</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:cityInCountry>
+    <tourismkg:displayName>Jaipur</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Venice">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Italy">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:countryISOCode>IT</tourismkg:countryISOCode>
+        <tourismkg:displayName>Italy</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:cityInCountry>
+    <tourismkg:displayName>Venice</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#UffiziGallery">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Museum"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Florence">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Italy"/>
+        <tourismkg:displayName>Florence</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Uffizi Gallery</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#locatedInRegion">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="Nfd95dc9220bd45479837b5c8fc0fac4b">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TourismExperience"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Region"/>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Cappadocia">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TourismRegion"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Region"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:regionInCountry rdf:resource="https://example.org/tourismkg/2026#Turkiye"/>
+    <tourismkg:displayName>Cappadocia</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#York">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#England">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#ConstituentCountry"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:countryPartOf rdf:resource="https://example.org/tourismkg/2026#UnitedKingdom"/>
+        <tourismkg:displayName>England</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:cityInCountry>
+    <tourismkg:displayName>York</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#designationName">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#HeritageDesignation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#nearRailwayStation">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="N1f3a581b4f724ccd9b769e8820d18edd">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#accessibilityDetails">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasHeritageDesignation">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#HeritageDesignation"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#isFreeAdmission">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#AdmissionTicket"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#IndiaGate">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Monument"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Delhi">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#India"/>
+        <tourismkg:displayName>Delhi</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>India Gate</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#HagiaSophia">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#ReligiousSite"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Istanbul">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Turkiye"/>
+        <tourismkg:displayName>Istanbul</tourismkg:displayName>
+        <rdfs:label xml:lang="tr">İstanbul</rdfs:label>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Hagia Sophia</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Hotel">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Accommodation"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#latitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#serviceDestinationCity">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#City"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#priceUnit">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#TopkapiPalace">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#HistoricSite"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity rdf:resource="https://example.org/tourismkg/2026#Istanbul"/>
+    <tourismkg:displayName>Topkapı Palace</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasAccessibilityFeature">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="N085fdc584f5c470a9d7535a0b6376977">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#experienceStartDate">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TourismExperience"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#priceValidFrom">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#displayName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#nextStop">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#ItineraryStop"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#ItineraryStop"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#countryPartOf">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#ConstituentCountry"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#BusService">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#itineraryHasStop">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TravelItinerary"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#ItineraryStop"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasVisitorReview">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="N8be80a31b1a7444e8603cd2274b14a3d">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#VisitorReview"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#sourcePublisher">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Milan">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Italy"/>
+    <tourismkg:displayName>Milan</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#isDirectService">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#evidenceClaimCategory">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Osaka">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Japan"/>
+    <tourismkg:displayName>Osaka</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#cityInCountry">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Country"/>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Oxford">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#England"/>
+    <tourismkg:displayName>Oxford</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TourOperator">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Organisation"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#currencyCode">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#serviceOriginCity">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#City"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#tourVisitsAttraction">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#GuidedTour"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#locatedInCountry">
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Country"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasAdmissionTicket">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#AdmissionTicket"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#sourceTitle">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#regionInCountry">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#Region"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#Country"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#evidenceClaimText">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#BusStation">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Mumbai">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#India"/>
+    <tourismkg:displayName>Mumbai</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#ScenicArea">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#NaturalAttraction"/>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#TajMahal">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#HistoricSite"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Agra">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#India"/>
+        <tourismkg:displayName>Agra</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Taj Mahal</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#priceValidUntil">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#stopAtAttraction">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#ItineraryStop"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#KiyomizuderaTemple">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#ReligiousSite"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+    <tourismkg:locatedInCity>
+      <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#Kyoto">
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#City"/>
+        <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+        <tourismkg:cityInCountry rdf:resource="https://example.org/tourismkg/2026#Japan"/>
+        <tourismkg:displayName>Kyoto</tourismkg:displayName>
+      </owl:NamedIndividual>
+    </tourismkg:locatedInCity>
+    <tourismkg:displayName>Kiyomizu-dera Temple</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#sourceURL">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#stationServesCity">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#City"/>
+  </owl:ObjectProperty>
+  <owl:Ontology rdf:about="https://example.org/tourismkg/2026"/>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#priceFor">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range>
+      <owl:Class rdf:nodeID="Nf71786ebff664f4ba7d17c677c209034">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#AdmissionTicket"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#designationScheme">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#HeritageDesignation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Hostel">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Accommodation"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#pricePurpose">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#HolidayRental">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Accommodation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Guesthouse">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Accommodation"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#hasPriceRecord">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="N3d74cd577fa345f79e906a2971ea3720">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#AdmissionTicket"/>
+          <rdf:Description rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#PriceRecord"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://example.org/tourismkg/2026#journeyDurationMinutes">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#eventAtAttraction">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#CulturalEvent"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#City">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <owl:disjointWith rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#GuidedTour">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TourismExperience"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Country">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#VisitorInformation"/>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#FitzwilliamAdmissionEvidence">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <tourismkg:evidenceClaimText>General admission to the collection is free; some exhibitions require tickets.</tourismkg:evidenceClaimText>
+    <tourismkg:sourcePublisher>The Fitzwilliam Museum</tourismkg:sourcePublisher>
+    <tourismkg:sourceTitle>The Fitzwilliam Museum - Frequently Asked Questions</tourismkg:sourceTitle>
+    <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://fitzmuseum.cam.ac.uk/frequently-asked-questions</tourismkg:sourceURL>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#FitzwilliamAccessEvidence">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <tourismkg:evidenceClaimText>The courtyard entrance provides step-free access, and a lift serves the first floor.</tourismkg:evidenceClaimText>
+    <tourismkg:sourcePublisher>The Fitzwilliam Museum</tourismkg:sourcePublisher>
+    <tourismkg:sourceTitle>Plan your visit</tourismkg:sourceTitle>
+    <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://fitzmuseum.cam.ac.uk/plan-your-visit</tourismkg:sourceURL>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#UnitedKingdom">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#Country"/>
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+    <tourismkg:countryISOCode>GB</tourismkg:countryISOCode>
+    <tourismkg:displayName>United Kingdom</tourismkg:displayName>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#BritishMuseumAdmissionEvidence">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <tourismkg:evidenceClaimText>Access to the British Museum collection is free.</tourismkg:evidenceClaimText>
+    <tourismkg:sourcePublisher>GOV.UK</tourismkg:sourcePublisher>
+    <tourismkg:sourceTitle>About us - British Museum - GOV.UK</tourismkg:sourceTitle>
+    <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gov.uk/government/organisations/british-museum/about</tourismkg:sourceURL>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#RailService">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nec8697e701a64c86ace4442e41cb7b32">
+        <owl:onProperty rdf:resource="https://example.org/tourismkg/2026#serviceArrivesAt"/>
+        <owl:someValuesFrom rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nefb2c5d911ef4f06af4b93cf03ce0457">
+        <owl:onProperty rdf:resource="https://example.org/tourismkg/2026#serviceDepartsFrom"/>
+        <owl:someValuesFrom rdf:resource="https://example.org/tourismkg/2026#RailwayStation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#NaturalAttraction">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="https://example.org/tourismkg/2026#BritishMuseumAccessEvidence">
+    <rdf:type rdf:resource="https://example.org/tourismkg/2026#EvidenceRecord"/>
+    <tourismkg:evidenceClaimText>The museum map identifies lifts and level-access lifts. Gallery closures may affect step-free access.</tourismkg:evidenceClaimText>
+    <tourismkg:sourcePublisher>The British Museum</tourismkg:sourcePublisher>
+    <tourismkg:sourceTitle>British Museum Map</tourismkg:sourceTitle>
+    <tourismkg:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.britishmuseum.org/sites/default/files/2024-07/British_Museum_map.pdf</tourismkg:sourceURL>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#ConstituentCountry">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Country"/>
+    <owl:disjointWith rdf:resource="https://example.org/tourismkg/2026#SovereignCountry"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#PriceRecord">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#VisitorInformation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#SovereignCountry">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Country"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#CulturalEvent">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TourismExperience"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#AdmissionTicket">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#VisitorInformation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#HeritageDesignation"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#CulturalAttraction">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TouristAttraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Organisation"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TransportOperator">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Organisation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#RailwayStation">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Monument">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TransportService"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#EvidenceRecord"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#VisitorReview">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#VisitorInformation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#ReligiousSite">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TourismRegion">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#Region"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Region">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#GeographicalEntity"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#serviceArrivesAt">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Accommodation"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TravelItinerary"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#GeographicalEntity"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#ItineraryStop"/>
+  <owl:ObjectProperty rdf:about="https://example.org/tourismkg/2026#serviceDepartsFrom">
+    <rdfs:domain rdf:resource="https://example.org/tourismkg/2026#TransportService"/>
+    <rdfs:range rdf:resource="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#Museum">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TouristAttraction"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TransportInfrastructure"/>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#HistoricSite">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#CulturalAttraction"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#StepFreeAccess">
+    <rdfs:subClassOf rdf:resource="https://example.org/tourismkg/2026#AccessibilityFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/tourismkg/2026#TourismExperience"/>
+</rdf:RDF>
