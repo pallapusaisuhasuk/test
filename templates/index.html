@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourism NLP to SPARQL</title>
+<style>
+:root{--navy:#14243a;--blue:#2463eb;--bg:#f3f6fb;--muted:#64748b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,sans-serif;color:#172033}
+header{background:linear-gradient(120deg,#14243a,#2457a6);color:white;padding:28px 18px}
+.wrap{max-width:980px;margin:auto;padding:0 16px}
+header h1{margin:0 0 8px;font-size:27px}header p{margin:0;color:#dbeafe;line-height:1.5}
+main{max-width:980px;margin:22px auto;padding:0 16px}
+.card{background:white;border:1px solid #e3e9f2;border-radius:14px;padding:20px;margin-bottom:16px;box-shadow:0 5px 18px #1720330a}
+label{font-weight:700;display:block;margin-bottom:9px}
+textarea{width:100%;min-height:90px;border:1px solid #cbd5e1;border-radius:9px;padding:13px;font:16px Arial;resize:vertical}
+button{border:0;border-radius:9px;background:var(--blue);color:white;padding:12px 18px;font-weight:700;font-size:15px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}.askrow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.example{background:#eff6ff;color:#1d4ed8;border:1px solid #dbeafe;padding:8px 10px;border-radius:20px;font-size:13px;cursor:pointer}
+.muted{color:var(--muted);font-size:13px}.status{margin-top:12px;font-size:14px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#101827;color:#d9e7ff;padding:16px;border-radius:10px;line-height:1.5;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:11px;text-align:left;border-bottom:1px solid #e7edf5;vertical-align:top}th{background:#f7f9fc}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{background:#eaf2ff;color:#1d4ed8;padding:6px 10px;border-radius:20px;font-size:12px;font-weight:700}
+.hidden{display:none}.error{color:#b91c1c}.empty{padding:18px;text-align:center;color:var(--muted)}
+@media(max-width:600px){header h1{font-size:22px}.card{padding:15px}.askrow button{width:100%}table{font-size:12px}th,td{padding:8px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Tourism Knowledge Graph</h1>
+<p>Ask a question in plain English. The application identifies the intent, creates a SPARQL query and retrieves answers from your RDF dataset.</p>
+</div></header>
+<main>
+<section class="card">
+<div class="muted">RDF dataset loaded · {{ triple_count }} triples</div>
+<h2>Ask your question</h2>
+<label for="question">Natural language question</label>
+<textarea id="question" placeholder="Example: Which tourist attractions are located in London?"></textarea>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px">
+ <div>
+  <label for="backend">Query execution</label>
+  <select id="backend" onchange="toggleEndpoint()" style="width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:9px;font-size:14px">
+   <option value="fuseki" selected>Apache Jena Fuseki</option>
+   <option value="local">Local RDFLib (offline)</option>
+  </select>
+ </div>
+ <div id="endpointBox">
+  <label for="endpoint">Fuseki SPARQL query endpoint</label>
+  <input id="endpoint" value="http://localhost:3030/tourism/sparql" style="width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:9px;font-size:14px">
+ </div>
+</div>
+<div class="askrow"><button id="askBtn" onclick="askQuestion()">Generate SPARQL &amp; Run Query</button><span class="muted">Fuseki mode sends the query to your Fuseki server.</span></div>
+<div class="examples">
+<button class="example" onclick="setQuestion('Which cities are located in Italy?')">Cities in Italy</button>
+<button class="example" onclick="setQuestion('Which tourist attractions are located in London?')">Attractions in London</button>
+<button class="example" onclick="setQuestion('Which attractions are museums?')">List museums</button>
+<button class="example" onclick="setQuestion('What type of attraction is the Colosseum?')">Attraction type</button>
+<button class="example" onclick="setQuestion('Which trains depart from Cambridge?')">Trains from Cambridge</button>
+<button class="example" onclick="setQuestion('Is the British Museum accessible?')">Accessibility</button>
+<button class="example" onclick="setQuestion('Is admission to the British Museum free?')">Free admission</button>
+<button class="example" onclick="setQuestion('Which country is Cambridge in?')">Country of a city</button>
+</div>
+<div id="status" class="status" aria-live="polite"></div>
+</section>
+
+<section id="queryCard" class="card hidden">
+<div class="results-head"><h2>Generated SPARQL query</h2><button style="background:#334155" onclick="copyQuery()">Copy query</button></div>
+<pre id="sparql"></pre>
+<div class="muted" id="intent"></div>
+</section>
+
+<section id="answerCard" class="card hidden">
+<div class="results-head"><h2>Answer</h2><span class="pill" id="count"></span></div>
+<div id="tableWrap"></div>
+</section>
+</main>
+<script>
+let latestQuery="";
+function setQuestion(q){document.getElementById("question").value=q;document.getElementById("question").focus();}
+function toggleEndpoint(){document.getElementById("endpointBox").style.display=document.getElementById("backend").value==="fuseki"?"block":"none";}
+toggleEndpoint();
+async function askQuestion(){
+ const question=document.getElementById("question").value.trim();
+ const status=document.getElementById("status"), btn=document.getElementById("askBtn");
+ if(!question){status.textContent="Please type a question first.";status.className="status error";return;}
+ btn.disabled=true;btn.textContent="Processing…";status.textContent="Identifying intent and querying the RDF graph…";status.className="status";
+ document.getElementById("queryCard").classList.add("hidden");document.getElementById("answerCard").classList.add("hidden");
+ try{
+  const response=await fetch("/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,backend:document.getElementById("backend").value,endpoint:document.getElementById("endpoint").value})});
+  const data=await response.json();
+  if(!response.ok||!data.ok) throw new Error(data.error||"Unable to process this question.");
+  latestQuery=data.sparql;
+  document.getElementById("sparql").textContent=data.sparql;
+  document.getElementById("intent").textContent="Detected pattern: "+data.intent.replaceAll("_"," ")+" · "+Object.entries(data.entities).map(([k,v])=>k+": "+v).join(" · ");
+  document.getElementById("queryCard").classList.remove("hidden");
+  document.getElementById("count").textContent=data.count+" result(s)";
+  const wrap=document.getElementById("tableWrap");
+  if(data.rows.length===0){wrap.innerHTML='<div class="empty">No matching results were found in this RDF dataset.</div>';}
+  else{
+   const table=document.createElement("table"), thead=document.createElement("thead"), hr=document.createElement("tr");
+   data.columns.forEach(c=>{const th=document.createElement("th");th.textContent=c.replace(/Name$/,"").replace(/([A-Z])/g," $1");hr.appendChild(th);});
+   thead.appendChild(hr);table.appendChild(thead);
+   const tbody=document.createElement("tbody");
+   data.rows.forEach(row=>{const tr=document.createElement("tr");row.forEach(value=>{const td=document.createElement("td");td.textContent=value;tr.appendChild(td);});tbody.appendChild(tr);});
+   table.appendChild(tbody);wrap.replaceChildren(table);
+  }
+  document.getElementById("answerCard").classList.remove("hidden");
+  status.textContent="Success — SPARQL executed using "+data.source+".";
+ }catch(err){status.textContent=err.message;status.className="status error";}
+ finally{btn.disabled=false;btn.textContent="Generate SPARQL & Find Answer";}
+}
+function copyQuery(){if(latestQuery)navigator.clipboard.writeText(latestQuery).then(()=>{document.getElementById("status").textContent="SPARQL query copied.";}).catch(()=>{document.getElementById("status").textContent="Clipboard access was blocked by the browser.";});}
+document.getElementById("question").addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="Enter")askQuestion();});
+</script>
+</body></html>
